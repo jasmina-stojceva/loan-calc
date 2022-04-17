@@ -18,9 +18,10 @@ public class LoadDatabase {
 	@Bean
 	  CommandLineRunner initDatabase(LoanRequestServiceImpl loanRequestService) {
 		return args -> {
-			   LoanRequest loanRequest = new LoanRequest(1000,5,10);
-			   loanRequestService.save(loanRequest);
-	
+			
+			  LoanRequest loanRequest = new LoanRequest(1000,5,10);
+			  loanRequestService.save(loanRequest);
+			 
 	};
 	}
 }

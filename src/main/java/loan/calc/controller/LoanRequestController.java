@@ -23,7 +23,7 @@ import loan.calc.model.LoanRequest;
 @RequestMapping("/api")
 public class LoanRequestController {
 	@Autowired
-	LoanRequestRepository loanRequestRepository;
+	private LoanRequestRepository loanRequestRepository;
 	
 	@Autowired
 	private LoanRequestServiceImpl loanRequestService;
@@ -50,6 +50,7 @@ public class LoanRequestController {
 	}
 	
 	@PostMapping("/save-loan")
+    public 
     LoanRequest newLoanRequest(@Valid @RequestBody LoanRequest newLoanRequest) {
         return loanRequestService.save(newLoanRequest);
     }
